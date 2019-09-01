@@ -11,6 +11,10 @@ export PATH="/opt/conda/bin:/usr/local/bin:/usr/bin:/bin:"
 unset CONDA_DEFAULT_ENV
 export ANACONDA_HOME=/opt/conda
 
+%runscript
+echo "This gets run when you run the image!" 
+exec echo "$@"
+
 %post
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # This is going to be executed after the base container has been downloaded
