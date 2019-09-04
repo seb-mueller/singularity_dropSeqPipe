@@ -35,7 +35,7 @@ conda install --yes pysam
 #conda install --yes biopython=1.72
 conda install --yes biopython
 conda install --yes python>=3.6
-conda install --yes star=2.6.1e
+conda install --yes star=2.6.1b
 conda install --yes picard
 #conda install --yes picard=2.14.1.0
 conda install --yes pigz
