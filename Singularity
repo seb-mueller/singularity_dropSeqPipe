@@ -26,7 +26,8 @@ conda install --yes pip
 conda install --yes readline
 #conda install --yes cutadapt=1.16
 conda install --yes cutadapt
-conda install --yes dropseq_tools=2.0.0
+#conda install --yes dropseq_tools=2.0.0
+#conda install --yes java
 conda install --yes font-ttf-dejavu-sans-mono=2.37
 conda install --yes fontconfig=2.13.1
 #conda install --yes pysam=0.15.1
@@ -34,12 +35,20 @@ conda install --yes pysam
 #conda install --yes biopython=1.72
 conda install --yes biopython
 conda install --yes python>=3.6
-conda install --yes star=2.7.2a
+conda install --yes star=2.6.1e
 conda install --yes picard
 #conda install --yes picard=2.14.1.0
 conda install --yes pigz
+conda install --yes openjdk>=8
+conda install --yes unzip
 #conda install --yes pigz=2.4
 conda clean --index-cache --tarballs --packages --yes
 
 pip install snakemake
+
+wget https://github.com/broadinstitute/Drop-seq/releases/download/v2.3.0/Drop-seq_tools-2.3.0.zip
+unzip Drop-seq_tools-2.3.0.zip
+
+PATH=$PATH:Drop-seq_tools-2.3.0
+
 
