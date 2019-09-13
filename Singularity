@@ -14,7 +14,7 @@ export ANACONDA_HOME=/opt/conda
 %post
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # This is going to be executed after the base container has been downloaded
-# apt-get install -y gcc
+ apt-get install -y gcc
 
 export PATH=/opt/conda/bin:$PATH
 conda config --add channels defaults
@@ -56,29 +56,29 @@ conda install --yes matplotlib
 conda install --yes scikit-learn
 conda install --yes h5py
 conda install --yes click
-conda install --yes gcc
+# conda install --yes gcc
 #  - pip:
 #    - velocyto
 
 # r channel?
-#conda install --yes r=3.4
-#conda install --yes r-matrix=1.2_14
+conda install --yes r=3.4
+conda install --yes r-matrix=1.2_14
 #conda install --yes readline=6.2
-#conda install --yes readline
+conda install --yes readline
 #conda install --yes r=3.4.1
-#conda install --yes r-ggplot2=2.2.1
-#conda install --yes r-gridextra
-#conda install --yes r-viridis
-#conda install --yes r-stringdist
-#conda install --yes r-dplyr=0.7.6
-#conda install --yes r-mvtnorm
-#conda install --yes r-seurat=2
-#conda install --yes r-hmisc
-#conda install --yes r-tidyverse
-#conda install --yes r-devtools
-#conda install --yes r-rcolorbrewer
-#conda install --yes font-ttf-dejavu-sans-mono=2.37
-#conda install --yes fontconfig=2.13.1
+conda install --yes r-ggplot2=2.2.1
+conda install --yes r-gridextra
+conda install --yes r-viridis
+conda install --yes r-stringdist
+conda install --yes r-dplyr=0.7.6
+conda install --yes r-mvtnorm
+conda install --yes r-seurat=2
+conda install --yes r-hmisc
+conda install --yes r-tidyverse
+conda install --yes r-devtools
+conda install --yes r-rcolorbrewer
+conda install --yes font-ttf-dejavu-sans-mono=2.37
+conda install --yes fontconfig=2.13.1
 
 conda clean --index-cache --tarballs --packages --yes
 pip install snakemake
