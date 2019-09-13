@@ -17,9 +17,12 @@ export ANACONDA_HOME=/opt/conda
  apt-get install -y gcc
 
 export PATH=/opt/conda/bin:$PATH
+conda update conda
+
 conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
+conda config --add channels r
 conda install --yes snakemake
 conda install --yes pip
 #conda install --yes cutadapt=1.16
