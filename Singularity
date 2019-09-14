@@ -27,10 +27,12 @@ conda install --yes snakemake
 conda install --yes pip
 #conda install --yes cutadapt=1.16
 conda install --yes cutadapt
-conda install --yes dropseq_tools=2.3.0
 #conda install --yes java
+# dropseq_tools.yaml
+conda install --yes dropseq_tools=2.3.0
 conda install --yes font-ttf-dejavu-sans-mono=2.37
 conda install --yes fontconfig=2.13.1
+# merge_bam.yaml
 #conda install --yes pysam=0.15.1
 conda install --yes pysam
 #conda install --yes biopython=1.72
@@ -38,19 +40,25 @@ conda install --yes biopython
 conda install --yes python>=3.6
 # star
 conda install --yes star=2.6.1b
+# picard.yaml
 conda install --yes picard
 #conda install --yes picard=2.14.1.0
+conda install --yes font-ttf-dejavu-sans-mono=2.37
+conda install --yes fontconfig=2.13.1
+
+# pigz.yaml
 conda install --yes pigz
 #conda install --yes pigz=2.4
+
 conda install --yes openjdk>=8
 conda install --yes unzip
-# UMI tools
+# UMI tools.yaml
 conda install --yes umi_tools=0.5.5
 conda install --yes scipy=1.1.0
 # samtools
 conda install --yes samtools=1.9
 conda install --yes ncurses=6.1
-# velocyto
+# velocyto.yaml
 conda install --yes numpy
 conda install --yes scipy
 conda install --yes cython
@@ -65,8 +73,6 @@ conda install --yes click
 
 # r channel?
 conda install --yes r=3.4
-conda install --yes r-matrix=1.2_14
-#conda install --yes readline=6.2
 conda install --yes readline
 #conda install --yes r=3.4.1
 conda install --yes r-ggplot2=2.2.1
@@ -80,8 +86,11 @@ conda install --yes r-hmisc
 conda install --yes r-tidyverse
 conda install --yes r-devtools
 conda install --yes r-rcolorbrewer
-conda install --yes font-ttf-dejavu-sans-mono=2.37
-conda install --yes fontconfig=2.13.1
+# merge.yaml
+conda install --yes r-matrix=1.2_14
+#conda install --yes readline=6.2
+# bbmap (repair.sh)
+conda install --yes bbmap=38.22
 
 conda clean --index-cache --tarballs --packages --yes
 pip install snakemake
