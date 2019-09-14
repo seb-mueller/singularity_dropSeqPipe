@@ -14,7 +14,8 @@ export ANACONDA_HOME=/opt/conda
 %post
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # This is going to be executed after the base container has been downloaded
- apt-get install -y gcc
+apt-get update
+apt-get install -y gcc
 
 export PATH=/opt/conda/bin:$PATH
 conda update conda
@@ -78,14 +79,14 @@ conda install --yes readline
 conda install --yes r-ggplot2=2.2.1
 conda install --yes r-gridextra
 conda install --yes r-viridis
-conda install --yes r-stringdist
+#conda install --yes r-stringdist # seems not to be used anymore
 conda install --yes r-dplyr=0.7.6
-conda install --yes r-mvtnorm
+# conda install --yes r-mvtnorm # seems not to be used anymore
 conda install --yes r-seurat=2
 conda install --yes r-hmisc
 conda install --yes r-tidyverse
-conda install --yes r-devtools
-conda install --yes r-rcolorbrewer
+# conda install --yes r-devtools # seems not to be used anymore
+#conda install --yes r-rcolorbrewer # seems not to be used anymore
 # merge.yaml
 conda install --yes r-matrix=1.2_14
 #conda install --yes readline=6.2
@@ -101,4 +102,8 @@ pip install velocyto
 
 #PATH=$PATH:Drop-seq_tools-2.3.0
 
-
+#clean up
+apt-get -y remove --auto-remove gcc
+apt-get -y autoremove --purge
+apt-get -y autoclean
+apt-get -y clean
