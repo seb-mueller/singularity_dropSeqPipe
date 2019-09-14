@@ -24,6 +24,30 @@ conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 conda config --add channels r
+
+conda install --yes r
+#conda install --yes r=3.4
+conda install --yes readline
+#conda install --yes r=3.4.1
+conda install --yes r-ggplot2
+#conda install --yes r-ggplot2=2.2.1
+conda install --yes r-gridextra
+conda install --yes r-viridis
+#conda install --yes r-stringdist # seems not to be used anymore
+conda install --yes r-dplyr
+#conda install --yes r-dplyr=0.7.6
+# conda install --yes r-mvtnorm # seems not to be used anymore
+conda install --yes r-seurat=2
+conda install --yes r-hmisc
+conda install --yes r-tidyverse
+# conda install --yes r-devtools # seems not to be used anymore
+#conda install --yes r-rcolorbrewer # seems not to be used anymore
+# merge.yaml
+conda install --yes r-matrix
+#conda install --yes r-matrix=1.2_14
+#conda install --yes readline=6.2
+# bbmap (repair.sh)
+conda install --yes bbmap=38.22
 conda install --yes snakemake
 conda install --yes pip
 #conda install --yes cutadapt=1.16
@@ -72,26 +96,6 @@ conda install --yes click
 #  - pip:
 #    - velocyto
 
-# r channel?
-conda install --yes r=3.4
-conda install --yes readline
-#conda install --yes r=3.4.1
-conda install --yes r-ggplot2=2.2.1
-conda install --yes r-gridextra
-conda install --yes r-viridis
-#conda install --yes r-stringdist # seems not to be used anymore
-conda install --yes r-dplyr=0.7.6
-# conda install --yes r-mvtnorm # seems not to be used anymore
-conda install --yes r-seurat=2
-conda install --yes r-hmisc
-conda install --yes r-tidyverse
-# conda install --yes r-devtools # seems not to be used anymore
-#conda install --yes r-rcolorbrewer # seems not to be used anymore
-# merge.yaml
-conda install --yes r-matrix=1.2_14
-#conda install --yes readline=6.2
-# bbmap (repair.sh)
-conda install --yes bbmap=38.22
 
 conda clean --index-cache --tarballs --packages --yes
 pip install snakemake
