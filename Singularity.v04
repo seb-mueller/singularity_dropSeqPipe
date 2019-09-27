@@ -3,7 +3,7 @@ From: continuumio/miniconda3:4.7.10
 
 %labels
 AUTHOR sebmu@posteo.de
-Version v04.1
+Version v0.4.1
 
 %environment
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
