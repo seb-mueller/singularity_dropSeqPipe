@@ -40,7 +40,7 @@ conda install --yes r-dplyr
 conda install --yes r-seurat=2
 conda install --yes r-hmisc
 conda install --yes r-tidyverse
-# conda install --yes r-devtools # seems not to be used anymore
+conda install --yes r-devtools
 #conda install --yes r-rcolorbrewer # seems not to be used anymore
 # merge.yaml
 conda install --yes r-matrix
@@ -95,7 +95,8 @@ conda install --yes click
 # conda install --yes gcc
 #  - pip:
 #    - velocyto
-
+conda install fastqc
+conda install multiqc
 
 conda clean --index-cache --tarballs --packages --yes
 pip install snakemake
